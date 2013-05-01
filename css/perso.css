@@ -1,15 +1,26 @@
-body {
-    background: #080705 url(images/background.jpg)no-repeat  50% 0;
+body{
     border: none;
 }
 
+body.rubrique_9,body.rubrique_6,body.rubrique_3 {
+	background: url(images/background.jpg) 50% 0 no-repeat, url(images/background.png) #FFFFFF;
+	
+}
+.rubrique_9 .page,.rubrique_6 .page,.rubrique_3 .page{
+	height:875px;
+	
+} 
 .page{
 	width:1000px;
 		}
 
 .header {border:none;padding-bottom:0;}
 
-.header #logo  a{line-height:2em;color:#ffffff;font-size:1.3em}
+.header #logo  a{line-height:2em;font-size:1.3em}
+
+.rubrique_9 #logo  a,.rubrique_6 #logo  a,.rubrique_3 #logo  a{
+	color:#ffffff;
+}
 .wrapper {
     width: 50%;
 
@@ -20,15 +31,6 @@ body {
 .main{padding:0}
 
 .wrapper .spip_logos{backround:none}
-.cartouche, .texte{
-		background: rgb(255, 255, 255);
-	/* RGBa with 0.6 opacity */
-	background: rgba(255, 255, 255, 0.6);
-	/* For IE 5.5 - 7*/
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-	/* For IE 8*/
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";	
-		padding:0 2em;}
 
 .cartouche{
 	margin-bottom:0
@@ -50,4 +52,4 @@ body {
     line-height: 1.5em;
 	}
 
- a, .footer {color:#fcfbe7}
+.rubrique_9 a,.rubrique_6 a, .rubrique_3 a,.rubrique_9 .footer ,.rubrique_6 .footer ,.rubrique_3 .footer {color:#fcfbe7}

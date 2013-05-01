@@ -16,19 +16,21 @@
 <link rel="alternate" type="application/rss+xml" title="<:syndiquer_rubrique:>" href="[(#URL_PAGE{backend}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" />
 </head>
 
-<body class="pas_surlignable page_rubrique">
+<body class="pas_surlignable page_rubrique rubrique_#ID_RUBRIQUE">
 <div class="page">
 	<INCLURE{fond=inclure/header} />
 	<div class="main">
 		[(#REM) Contenu principal : contenu de la rubrique ]
 
 		<div class="wrapper">
-		[(#LOGO_RUBRIQUE|image_reduire{539,*}) ]
+		[(#LOGO_RUBRIQUE|image_reduire{539,*}) ]    
+		[(#ID_RUBRIQUE|in_array{#LISTE{9,6,3}}|non)
 			<div class="cartouche">
 				<h1 class="#EDIT{titre} titre">#TITRE</h1>
 			</div>
-	
+	   
 			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+			]
 	
 			[(#REM) Articles de la rubrique ]
 			<B_articles>
