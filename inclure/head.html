@@ -41,3 +41,20 @@
 [(#REM) Favicon ]
 [<link rel="icon" type="image/x-icon" href="(#CHEMIN{favicon.ico})" />
 [<link rel="shortcut icon" type="image/x-icon" href="(#CHEMIN{favicon.ico})" />]]
+
+    <!-- LINK PAGE SCROLLER PRO JS FILE -->
+    <script type="text/javascript" src="#CHEMIN{javascript/jquery.pagescroller.lite.js}"></script>
+    <!-- / -->
+
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+        
+        // initiate page scroller plugin
+        $('body').pageScroller({
+            navigation: '#nav'
+        });
+                    
+    });
+        
+    </script>

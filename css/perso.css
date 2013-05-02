@@ -1,20 +1,27 @@
 body{
+	background: url(images/bg.jpg) transparent;
     border: none;
 }
 
-body.rubrique_9,body.rubrique_6,body.rubrique_3 {
-	background: url(images/background.jpg) 50% 0 no-repeat, url(images/background.png) #FFFFFF;
-	
-}
-.rubrique_9 .page,.rubrique_6 .page,.rubrique_3 .page{
-	height:875px;
-	
-} 
+
 .page{
 	width:1000px;
 		}
+		
+.footer .colophon {
+    width: 100%;
+}
 
-.header {border:none;padding-bottom:0;}
+.header {
+	background: url(images/bg.jpg) #FFFFFF;
+	height:100px;
+	position:fixed;
+	top:0em;
+	padding-top:1em;
+	border:none;
+	padding-bottom:0;
+	z-index:100
+	}
 
 .header #logo  a{line-height:2em;font-size:1.3em}
 
@@ -22,13 +29,13 @@ body.rubrique_9,body.rubrique_6,body.rubrique_3 {
 	color:#ffffff;
 }
 .wrapper {
-    width: 50%;
-
+    width:70%;
+	padding-top:8em;
 	text-align:justify;
 
     
 }
-.main{padding:0}
+.main{padding:0;margin-top:4em}
 
 .wrapper .spip_logos{backround:none}
 
@@ -37,7 +44,7 @@ body.rubrique_9,body.rubrique_6,body.rubrique_3 {
 	}
 
 .aside {
-    width: 45%;
+    width: 25%;
     margin-top:0.5em
 }
 
@@ -46,10 +53,65 @@ body.rubrique_9,body.rubrique_6,body.rubrique_3 {
 }
 
 
-
 .aside .menu{
     font-size: 2.2em;
     line-height: 1.5em;
 	}
 
 .rubrique_9 a,.rubrique_6 a, .rubrique_3 a,.rubrique_9 .footer ,.rubrique_6 .footer ,.rubrique_3 .footer {color:#fcfbe7}
+
+/*Pagescroller*/
+
+.standardNav,.menu{
+		position: fixed !important;
+		overflow: visible;
+		top: 20%;
+		right: 2%;
+		padding: 5px;
+		margin: 0;
+		width: 125px;
+		z-index: 9999;
+	}
+
+.menu{top:50%}
+	.standardNav ul,.menu ul{
+		display: block;
+		margin: 0;
+		padding: 6px;
+		list-style: none;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background: #fff;
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+	}
+
+	.standardNav.left{
+		margin-left: -645px;
+	}
+	
+	.standardNav li,.menu li{
+		display: block;
+	}
+	
+	.standardNav li a,.menu li a{
+		display: block;	
+		font-weight: normal;
+		padding: 8px 10px;
+		text-decoration: none;
+		color: #666;
+		font-size: 12px;
+	}	
+	
+	.standardNav li a:hover ,.menu li a:hover {
+		background:transparent;
+		color: #333;
+	}
+	
+	.standardNav li.active a,.menu li.active a,.standardNav li a:focus,.menu li.active a:focus{
+		background:transparent;
+		font-weight: bold;
+		color: #000;
+	}
